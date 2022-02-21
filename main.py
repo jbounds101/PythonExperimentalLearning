@@ -1,5 +1,5 @@
 import sys  # Load a library module
-print(sys.platform)
+print(sys.executable)
 print(2 ** 100)  # Raise 2 to a power
 x = 'Spam!'
-print(x * 8)  # String repetition
+print(x[1])  # String repetition
