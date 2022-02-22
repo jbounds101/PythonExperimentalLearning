@@ -1,11 +1,13 @@
 import sys  # Load a library module
 print(sys.executable)
 print(2 ** 100)  # Raise 2 to a power
+
+# Section: String Formatting
 x = 'Spam!'
 print(x[1])  # String repetition
 print(x[1:3])  # Print chars 1 to 3 (not including 3)
 
-#  x[1] = '3' Strings are immutable
+#  x[1] = '3' Strings are immutable, not possible (calls error)
 x = x[:1] + '3' + x[2:]
 print(x)
 
@@ -18,9 +20,45 @@ print(s)
 print(s.find('straw'))   # find returns the start index of a substring, or -1 if not find
 print(s.find('ies'))
 
-s = s.replace('rries', 'ars are scary')  # replace all occurrences of a pattern with another
+s = s.replace('rries', 'ars are scary       ')  # replace all occurrences of a pattern with another
 s = s.capitalize()  # capitalize the first letter, make the rest lowercase
 print(s)
 
+s = (s.rstrip()).split(' ')  # split into list using a delimiter after stripping the whitespace from the right
+print(s)
 
+s = '%s, eggs, %s' % ('bacon', 'eggs')  # a way to format strings
+print(s)
+s = '{0}, cars, {1}'.format('planes', 'trucks')  # a more legible way
+print(s)
+s = '{}, cars, {}'.format('planes', 'trucks')  # can also exclude numbers
+print(s)
+
+# Section: Dictionaries
+
+D = {'food': 'Spam', 'quantity': 4, 'color': 'pink'}  # a dictionary, has a "key" and a "value"
+D['quantity'] += 1;  # dictionaries are mutable
+print(D)
+
+D = {}  # dictionaries can also be changed/created on the fly
+D['name'] = 'Joe'  # assign key 'name' to 'joe'
+D['occupation'] = 'Day-trading'
+D['money'] = -1000000
+print(D)
+
+person = dict(name='joe', job='programmer', salary='999999999')  # another way to make a dictionary
+personTwo = dict(zip(['name', 'job', 'salary'], ['joe', 'programmer', '999999999']))  # zipping to make a dictionary
+
+#  Dictionary mappings are not positional, so they may not print out in the same order!
+
+# Section: Tuples
+t = (1, 2, 3, 4)  # tuples are immutable like strings
+t += (5, 6)  # this makes a new object
+print(t)
+
+t = (1,)  # one item tuples require a comma to create
+t = (2,) + t
+print(t)
+
+#  tuples are not used nearly as often as lists, however, they are useful because of their immutability
 
