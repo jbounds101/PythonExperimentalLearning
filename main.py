@@ -1,4 +1,5 @@
 import sys  # Load a library module
+
 print(sys.executable)
 print(2 ** 100)  # Raise 2 to a power
 
@@ -17,7 +18,7 @@ s[:5] = ''
 s = ''.join(s)  # make into a string (rather than a list)
 print(s)
 
-print(s.find('straw'))   # find returns the start index of a substring, or -1 if not find
+print(s.find('straw'))  # find returns the start index of a substring, or -1 if not find
 print(s.find('ies'))
 
 s = s.replace('rries', 'ars are scary       ')  # replace all occurrences of a pattern with another
@@ -49,7 +50,7 @@ print(D)
 person = dict(name='joe', job='programmer', salary='999999999')  # another way to make a dictionary
 personTwo = dict(zip(['name', 'job', 'salary'], ['joe', 'programmer', '999999999']))  # zipping to make a dictionary
 
-#  Dictionary mappings are not positional, so they may not print out in the same order!
+# Dictionary mappings are not positional, so they may not print out in the same order!
 
 # Section: Tuples
 t = (1, 2, 3, 4)  # tuples are immutable like strings
@@ -60,5 +61,29 @@ t = (1,)  # one item tuples require a comma to create
 t = (2,) + t
 print(t)
 
-#  tuples are not used nearly as often as lists, however, they are useful because of their immutability
+# tuples are not used nearly as often as lists, however, they are useful because of their immutability
+
+# Section: Files
+f = open('data.txt', 'w')  # create a data.txt file with write privileges
+f.write('Hello\n')
+print(f.write('world!\n'))  # returns the number of characters printed
+f.close()
+
+f = open('data.txt')  # reading is the default operation
+text = f.read()  # files are always read as strings
+print(text)
+f.close()
+
+# Section: Sets
+x = set('spam')  # sets are immutable, unordered collections of unique objects
+# x = set('s', 'p', 'a', 'm') is the same set
+y = set('ham')
+print(x, y)
+print(x & y)  # union of x and y
+print(x | y)  # intersection of x and y
+print(x - y)  # difference of x and y
+print(x > y)  # check if x is a superset of y
+print(x == y)  # checks if they are equal, regardless of order
+
+
 
