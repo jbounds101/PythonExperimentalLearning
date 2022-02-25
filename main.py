@@ -115,6 +115,8 @@ print(x)
 
 x = 'king'
 y = 'kong'
-print(x + y)  # polymorphism, strings + is different from numerical +
+print(x + y)  # polymorphism, strings + is different from numerical
+
+
 
 
