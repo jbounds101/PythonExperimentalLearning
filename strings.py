@@ -29,3 +29,36 @@ s = '{0}, cars, {1}'.format('planes', 'trucks')  # a more legible way
 print(s)
 s = '{}, cars, {}'.format('planes', 'trucks')  # can also exclude numbers
 print(s)
+
+# Part 2
+
+print(r'C:\myhomedirectory!')  # r'string' allows for literal strings (no need to escape any characters)
+
+spanning = """
+always
+    look
+        on the
+            bright side"""
+# multiline strings can be created with triple quotes, these keep spacing from the left!
+
+print(spanning)
+
+word = 'king'
+print(word[::-1])  # reverses a string
+# the [#:#:n] subset n value refers to the step of the subset, for example, the default is 1, which steps up one index
+# until at the end-1, a step of 2 steps up two indices, and -1 goes backwards
+
+print('%(qty)d more %(food)s' % {'qty': 1, 'food': 'spam'})  # formatting on dictionaries
+
+spammer = {'food': 'spam', 'quantity': 100}
+print('{quantity}! That\'s a lot of {food}'.format(**spammer))  # formatting on dictionary object
+# ** is used to 'unpack' a dictionary
+
+reply = """
+Greetings...
+Hello {name}!
+Your age is {age}
+"""
+name = 'Bob'
+age = '16'
+print(reply.format(**vars()))  # a way to extract non object variables into strings
