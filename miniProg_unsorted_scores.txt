@@ -1,0 +1,13 @@
+Ava, 20
+Donald, 12
+Joe, 23
+Anna, 14
+Mitt, 20
+George, 49
+Dianne, 45
+John, 34
+Nancy, 23
+Sally, 43
+Ryan, 10
+Hunter, 22
+Eric, 12
